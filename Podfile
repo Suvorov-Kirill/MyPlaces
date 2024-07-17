@@ -6,5 +6,6 @@ target 'MyPlaces' do
   use_frameworks!
 
   # Pods for MyPlaces
+  pod 'RealmSwift'
 
 end

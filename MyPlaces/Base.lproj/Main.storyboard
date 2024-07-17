@@ -69,6 +69,7 @@
                                     <outlet property="locationLabel" destination="xER-fG-D8S" id="vCr-4F-mSL"/>
                                     <outlet property="nameLabel" destination="1FJ-e9-v6V" id="h2P-3V-DtS"/>
                                     <outlet property="typeLabel" destination="cTq-mp-det" id="Ee7-Ak-HF2"/>
+                                    <segue destination="Yhs-Cf-dlm" kind="show" identifier="showDetail" id="Owe-Hd-qmK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,6 +85,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Uj9-Cm-lJa" id="sg3-0E-cyU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCN-oq-LL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +98,7 @@
             <objects>
                 <tableViewController id="Yhs-Cf-dlm" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Iwa-uw-Sxo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
@@ -108,7 +112,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-cq-am4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-cq-am4">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
                                                 </imageView>
                                             </subviews>
@@ -251,7 +255,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="llp-I8-hT2">
                             <connections>
-                                <segue destination="7vT-y3-eaG" kind="unwind" unwindAction="unwindSegue:" id="dSY-kC-giy"/>
+                                <segue destination="7vT-y3-eaG" kind="unwind" unwindAction="unwindSegue:" id="3Qm-RI-5wg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -260,7 +264,7 @@
                         <outlet property="placeLocation" destination="5HF-tS-YXq" id="mtG-fa-INu"/>
                         <outlet property="placeName" destination="lBt-MS-RGj" id="2s8-wi-39i"/>
                         <outlet property="placeType" destination="PGM-rM-TAH" id="OcF-Op-W5T"/>
-                        <outlet property="saveButton" destination="llp-I8-hT2" id="XST-OG-fTd"/>
+                        <outlet property="saveButton" destination="llp-I8-hT2" id="uyl-lu-Frc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDh-WI-KWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,8 +310,11 @@
             <point key="canvasLocation" x="1638.9312977099237" y="-13.380281690140846"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Owe-Hd-qmK"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="addPhoto" width="194.66667175292969" height="195.66667175292969"/>
+        <image name="placePhoto" width="194.66667175292969" height="195.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
