@@ -155,6 +155,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="BS3-BO-Lz6">
+                                        <rect key="frame" x="0.0" y="525" width="393" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BS3-BO-Lz6" id="BeA-Rc-vgU">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="110" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K46-Ji-Z2J" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="96.666666666666686" y="15" width="200" height="110"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K46-Ji-Z2J" firstAttribute="centerY" secondItem="BeA-Rc-vgU" secondAttribute="centerY" id="7fD-f9-d65"/>
+                                                <constraint firstItem="K46-Ji-Z2J" firstAttribute="centerX" secondItem="BeA-Rc-vgU" secondAttribute="centerX" id="DB4-ML-ZoJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -197,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-zP-s7v">
-                                <rect key="frame" x="0.0" y="135" width="393" height="683"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="4td-lt-qb9" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -275,7 +292,7 @@
                         <viewLayoutGuide key="safeArea" id="aza-4O-nSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bWC-zP-s7v" firstAttribute="bottom" secondItem="aza-4O-nSj" secondAttribute="bottom" id="2Y3-La-Hc8"/>
+                            <constraint firstItem="bWC-zP-s7v" firstAttribute="bottom" secondItem="xuv-1V-uaw" secondAttribute="bottom" id="2Y3-La-Hc8"/>
                             <constraint firstItem="8QZ-mQ-kIT" firstAttribute="top" secondItem="aza-4O-nSj" secondAttribute="top" id="4VY-Gf-iFV"/>
                             <constraint firstItem="bWC-zP-s7v" firstAttribute="top" secondItem="8QZ-mQ-kIT" secondAttribute="bottom" constant="1" id="Blj-0G-Qhg"/>
                             <constraint firstItem="bWC-zP-s7v" firstAttribute="trailing" secondItem="aza-4O-nSj" secondAttribute="trailing" id="OnA-en-1Xo"/>
