@@ -48,7 +48,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         return places.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
