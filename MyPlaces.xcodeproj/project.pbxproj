@@ -16,6 +16,7 @@
 		1A64833A2C34341E00BC5AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6483392C34341E00BC5AE0 /* Assets.xcassets */; };
 		1A64833D2C34341E00BC5AE0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1A64833C2C34341E00BC5AE0 /* Base */; };
 		1A6483452C3473F500BC5AE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6483442C3473F500BC5AE0 /* MainViewController.swift */; };
+		1A97BF7E2C5BC54E00A7F2E1 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BF7D2C5BC54E00A7F2E1 /* MapManager.swift */; };
 		1AA4BBBD2C4C1DA400C6F529 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4BBBC2C4C1DA400C6F529 /* RatingControl.swift */; };
 		1AAB0C352C47C12900AC175E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB0C342C47C12900AC175E /* .gitignore */; };
 		1ACCC1FF2C371C1C004B6D2B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACCC1FE2C371C1C004B6D2B /* CustomTableViewCell.swift */; };
@@ -33,8 +34,9 @@
 		1A6483372C34341D00BC5AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A6483392C34341E00BC5AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A64833C2C34341E00BC5AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A64833E2C34341E00BC5AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A64833E2C34341E00BC5AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MyPlaces/Support Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		1A6483442C3473F500BC5AE0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1A97BF7D2C5BC54E00A7F2E1 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		1AA4BBBC2C4C1DA400C6F529 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		1AAB0C342C47C12900AC175E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = MyPlaces/.gitignore; sourceTree = "<group>"; };
 		1ACCC1FE2C371C1C004B6D2B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,21 +80,62 @@
 		1A64832F2C34341D00BC5AE0 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				1A6483302C34341D00BC5AE0 /* AppDelegate.swift */,
-				1A6483322C34341D00BC5AE0 /* SceneDelegate.swift */,
-				1A6483442C3473F500BC5AE0 /* MainViewController.swift */,
-				1A3F30142C3ACFF900FA8B8B /* NewPlaceViewController.swift */,
-				1AFC6ECA2C3A95AD00F21CDE /* PlaceModel.swift */,
-				1A2AFB1D2C46BC9000EEBDBB /* StorageManager.swift */,
-				1ACCC1FE2C371C1C004B6D2B /* CustomTableViewCell.swift */,
-				1AA4BBBC2C4C1DA400C6F529 /* RatingControl.swift */,
-				1A0739BA2C4E838800800C32 /* MapViewController.swift */,
-				1A6483362C34341D00BC5AE0 /* Main.storyboard */,
-				1A6483392C34341E00BC5AE0 /* Assets.xcassets */,
-				1A64833B2C34341E00BC5AE0 /* LaunchScreen.storyboard */,
-				1A64833E2C34341E00BC5AE0 /* Info.plist */,
+				1A97BF7F2C5BD2DB00A7F2E1 /* ViewControllers */,
+				1A97BF812C5BD37900A7F2E1 /* Helpers */,
+				1A97BF802C5BD36400A7F2E1 /* Models */,
+				1A97BF822C5BD3A800A7F2E1 /* Support Files */,
+				1A97BF832C5BD3FA00A7F2E1 /* IBuilder */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		1A97BF7F2C5BD2DB00A7F2E1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A6483442C3473F500BC5AE0 /* MainViewController.swift */,
+				1A3F30142C3ACFF900FA8B8B /* NewPlaceViewController.swift */,
+				1A0739BA2C4E838800800C32 /* MapViewController.swift */,
+				1ACCC1FE2C371C1C004B6D2B /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A97BF802C5BD36400A7F2E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC6ECA2C3A95AD00F21CDE /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A97BF812C5BD37900A7F2E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A97BF7D2C5BC54E00A7F2E1 /* MapManager.swift */,
+				1A2AFB1D2C46BC9000EEBDBB /* StorageManager.swift */,
+				1AA4BBBC2C4C1DA400C6F529 /* RatingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1A97BF822C5BD3A800A7F2E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A6483302C34341D00BC5AE0 /* AppDelegate.swift */,
+				1A6483322C34341D00BC5AE0 /* SceneDelegate.swift */,
+				1A6483392C34341E00BC5AE0 /* Assets.xcassets */,
+				1A64833E2C34341E00BC5AE0 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		1A97BF832C5BD3FA00A7F2E1 /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				1A6483362C34341D00BC5AE0 /* Main.storyboard */,
+				1A64833B2C34341E00BC5AE0 /* LaunchScreen.storyboard */,
+			);
+			path = IBuilder;
 			sourceTree = "<group>";
 		};
 		283C0931B0607C097C3D41FE /* Pods */ = {
@@ -234,6 +277,7 @@
 				1A2AFB1E2C46BC9000EEBDBB /* StorageManager.swift in Sources */,
 				1A0739BB2C4E838800800C32 /* MapViewController.swift in Sources */,
 				1AA4BBBD2C4C1DA400C6F529 /* RatingControl.swift in Sources */,
+				1A97BF7E2C5BC54E00A7F2E1 /* MapManager.swift in Sources */,
 				1AFC6ECB2C3A95AD00F21CDE /* PlaceModel.swift in Sources */,
 				1ACCC1FF2C371C1C004B6D2B /* CustomTableViewCell.swift in Sources */,
 				1A6483332C34341D00BC5AE0 /* SceneDelegate.swift in Sources */,
@@ -393,7 +437,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -424,7 +468,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
